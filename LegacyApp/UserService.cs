@@ -7,11 +7,11 @@ namespace LegacyApp
         private readonly IUserRepository _userRepository;
         private readonly IClientRepository _clientRepository;
         private readonly IUserCreditService _userCreditService;
-        public UserService(IUserRepository userRepository, IClientRepository clientRepository, IUserCreditService userCreditService)
+        public UserService()
         {
-            _userRepository = userRepository;
-            _clientRepository = clientRepository;
-            _userCreditService = userCreditService;
+            _userRepository = new UserRepository();
+            _clientRepository = new ClientRepository();
+            _userCreditService = new UserCreditService();
         }
         public bool AddUser(string firstName, string lastName, string email, DateTime dateOfBirth, int clientId)
         {
