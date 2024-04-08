@@ -28,7 +28,7 @@ namespace LegacyApp
             _userRepository.AddUser(user);
             return true;
         }
-        private bool IsValidUser(string firstName, string lastName, string email, DateTime dateOfBirth)
+        private static bool IsValidUser(string firstName, string lastName, string email, DateTime dateOfBirth)
         {
             if (string.IsNullOrEmpty(firstName) || string.IsNullOrEmpty(lastName)) return false;
             
@@ -40,7 +40,7 @@ namespace LegacyApp
 
             return age >= 21;
         }
-        private User CreateUser(Client client, DateTime dateOfBirth, string email, string firstName, string lastName)
+        private static User CreateUser(Client client, DateTime dateOfBirth, string email, string firstName, string lastName)
         {
             var user = new User
             {

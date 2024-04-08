@@ -4,15 +4,15 @@ namespace LegacyApp;
 
 public class UserRepository : IUserRepository
 {
-    private readonly List<User> users;
+    private readonly List<User> _users;
 
     public UserRepository()
     {
-        users = new List<User>();
+        _users = new List<User>();
     }
 
     public void AddUser(User user)
     {
-        users.Add(user);
+        _users.Add(user);
     }
 }
