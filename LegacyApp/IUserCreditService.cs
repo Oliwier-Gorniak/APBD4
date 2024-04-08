@@ -4,5 +4,5 @@ namespace LegacyApp;
 
 public interface IUserCreditService
 {
-    decimal GetCreditLimit(string lastName, DateTime dateOfBirth);
+    int GetCreditLimit(string lastName, DateTime dateOfBirth);
 }
